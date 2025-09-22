@@ -2,13 +2,7 @@ import pandas as pd
 from sklearn.preprocessing import StandardScaler
 
 def preprocess_data(df: pd.DataFrame):
-    """
-    Fungsi preprocessing dataset Diabetes.
-    Tahapan sama persis dengan eksperimen di notebook:
-    1. Tangani nilai 0 pada kolom tertentu dengan median
-    2. Hapus data duplikat
-    3. Standardisasi fitur numerik (selain kolom target 'Outcome')
-    """
+
     # 1. Tangani missing value (nilai 0 -> median)
     cols_with_zero = ['Glucose', 'BloodPressure', 'SkinThickness', 'Insulin', 'BMI']
     for col in cols_with_zero:
@@ -29,8 +23,8 @@ def preprocess_data(df: pd.DataFrame):
 
 
 if __name__ == "__main__":
-    # contoh eksekusi langsung dari file
-    file_path = "../dataset_raw/diabetes.csv"   # sesuaikan path dataset
+    # eksekusi langsung dari file
+    file_path = "../dataset_raw/diabetes.csv"   
     df = pd.read_csv(file_path)
 
     processed_df = preprocess_data(df)
@@ -39,6 +33,6 @@ if __name__ == "__main__":
     print("Shape data setelah preprocessing:", processed_df.shape)
     print(processed_df.head())
 
-    # opsional: simpan ke file baru
+    # simpan ke file baru
     processed_df.to_csv("dataset_preprocessing/diabetes_preprocessed.csv", index=False)
     print("Dataset hasil preprocessing disimpan ke diabetes_preprocessed.csv")
