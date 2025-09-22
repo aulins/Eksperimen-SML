@@ -1,0 +1,10 @@
+artifact_location: file:///C:/Users/aulin/OneDrive - Virtual Education Academy/Documents/Project/Dicoding/MLOps/Eksperimen_SML_Shafira-Maulidina/Membangun_model/mlruns/713890616692627086/models/m-810b2b1273394cb6b11b08ac12be6f0e/artifacts
+creation_timestamp: 1758518922912
+experiment_id: '713890616692627086'
+last_updated_timestamp: 1758518930190
+model_id: m-810b2b1273394cb6b11b08ac12be6f0e
+model_type: null
+name: model
+source_run_id: 450761a7ac68455a8ca0a23a60e9d994
+status: 2
+status_message: null
